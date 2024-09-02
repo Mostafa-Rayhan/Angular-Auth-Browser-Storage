@@ -1,5 +1,20 @@
-<div *ngIf="jsonData">
-    <h2>Parsed JSON Data</h2>
-    <pre>{{ jsonData | json }}</pre>
-  </div>
-  
+<div *ngIf="tableData.length > 0">
+  <h2>Parsed JSON Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tableData">
+        <td>{{ item.name }}</td>
+        <td>{{ item.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="tableData.length === 0">
+  <p>No data available.</p>
+</div>

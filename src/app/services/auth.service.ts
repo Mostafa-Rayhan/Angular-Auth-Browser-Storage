@@ -18,18 +18,6 @@ export class AuthService {
     private router: Router
   ) {}
 
-  // login(username: string, password: string, rememberMe: boolean): void {
-  //   const fakeToken = '1234567890abcdef'; // Simulate an auth token
-
-  //   if (rememberMe) {
-  //     this.localStorageService.setItem(this.tokenKey, fakeToken);
-  //   } else {
-  //     this.sessionStorageService.setItem(this.tokenKey, fakeToken);
-  //   }
-    
-  //   this.cookieService.set('remember_me', rememberMe ? 'true' : 'false', 7);
-  //   this.router.navigate(['/home']);
-  // }
 
   login(username: string, password: string, rememberMe: boolean): void {
     const fakeToken = '1234567890abcdef'; // Simulate an auth token
